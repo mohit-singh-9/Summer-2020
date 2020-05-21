@@ -9,21 +9,17 @@ from coeffs import *
 
 # Creating Triangle ABC
 a=6
-b=5
+median_AM=6
 c=6
-A,B,C= tri_vert(a,b,c)
-
+A,B,M= tri_vert(a/2,median_AM,c)
+C=np.array([a,0])
 # Creating triangle PQR
 p=a
 r=c
 Q = np.array([8,0])
 P=np.add(A,Q)
 R=np.add(C,Q)
-
-# Locating M, the midpoint of BC
-M= np.array([a/2,0])
-# Locating N, the midpoint of QR
-N= np.array([p/2+ 8,0])
+N=np.add(M,Q)
 
 # Generating lines
 x_AB = line_gen(A,B)
@@ -50,7 +46,7 @@ plt.plot(x_PN[0,:],x_PN[1,:],label='$PN$')
 plt.plot(A[0], A[1], 'o')
 plt.text(A[0] * (1 + 0.1), A[1] * (1 - 0.1) , 'A')
 plt.plot(B[0], B[1], 'o')
-plt.text(B[0] * (1 - 0.2), B[1] * (1) , 'B')
+plt.text(B[0] * (1 - 0.08), B[1] * (1) , 'B')
 plt.plot(C[0], C[1], 'o')
 plt.text(C[0] * (1 + 0.03), C[1] * (1 - 0.1) , 'C')
 plt.plot(M[0], M[1], 'o')
@@ -58,7 +54,7 @@ plt.text(M[0] * (1 + 0.03), M[1] * (1 - 0.1) , 'M')
 plt.plot(P[0], P[1], 'o')
 plt.text(P[0] * (1 + 0.1), P[1] * (1 - 0.1) , 'P')
 plt.plot(Q[0], Q[1], 'o')
-plt.text(Q[0] * (1 - 0.2), Q[1] * (1) , 'Q')
+plt.text(Q[0] * (1 - 0.09), Q[1] * (1) , 'Q')
 plt.plot(R[0], R[1], 'o')
 plt.text(R[0] * (1 + 0.03), R[1] * (1 - 0.1) , 'R')
 plt.plot(N[0], N[1], 'o')
