@@ -9,13 +9,14 @@ from coeffs import *
 
 # Creating Triangle ABC
 a=6
-median_AM=6
-c=6
-A,B,M= tri_vert(a/2,median_AM,c)
-C=np.array([a,0])
+b=4
+c=5
+A,B,C= tri_vert(a,b,c)
+M= np.array([a/2,0])
 # Creating triangle PQR
-p=a
-r=c
+p=6
+q=5
+r=4
 Q = np.array([8,0])
 P=np.add(A,Q)
 R=np.add(C,Q)
@@ -52,7 +53,7 @@ plt.text(C[0] * (1 + 0.03), C[1] * (1 - 0.1) , 'C')
 plt.plot(M[0], M[1], 'o')
 plt.text(M[0] * (1 + 0.03), M[1] * (1 - 0.1) , 'M')
 plt.plot(P[0], P[1], 'o')
-plt.text(P[0] * (1 + 0.1), P[1] * (1 - 0.1) , 'P')
+plt.text(P[0] * (1 + 0.03), P[1] * (1 - 0.1) , 'P')
 plt.plot(Q[0], Q[1], 'o')
 plt.text(Q[0] * (1 - 0.09), Q[1] * (1) , 'Q')
 plt.plot(R[0], R[1], 'o')

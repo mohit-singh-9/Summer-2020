@@ -9,13 +9,13 @@
 
 %Triangle ABC
 \def\a{6}
-\def\median{6}
-\def\c{6}
+\def\b{4}
+\def\c{5}
  
 %Coordinates of A
-\def\p{9/6}
+\def\p{45/12}
 %\def\p{4}
-\def\q{{sqrt(\median^2-\p^2)}}
+\def\q{{sqrt(\c^2-\p^2)}}
 
 %Labeling points
 \node (A) at (\p,\q)[point,label=above right:$A$] {};
@@ -43,13 +43,13 @@
 
 %Triangle PQR
 \def\p{6}
-\def\median{6}
-\def\r{6}
+\def\q{4}
+\def\r{5}
  
 %Coordinates of P
-\def\x{9/6}
+\def\x{45/12}
 %\def\p{4}
-\def\z{{sqrt(\median^2-\x^2)}}
+\def\z{{sqrt(\r^2-\x^2)}}
 
 %Labeling points
 \node (P) at (\x,\z)[point,label=above right:$P$] {};

@@ -123,8 +123,8 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	31pt+%
-	107pt+%
+	115pt+%
+	53pt+%
 0pt}
 \def\gumericNumCols{2}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -144,8 +144,8 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{31pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{107pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{115pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{longtable}[c]{%
 	b{\gnumericColA}%
@@ -182,29 +182,29 @@
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|--}
-	 \multicolumn{2}{|p{	\gnumericColA+%
-	\gnumericColB+%
-	\tabcolsep*2*1}|}%
-	{\gnumericPB{\centering}\gnumbox{Derived Values}}
-\\
-\hhline{|-|-|}
+\hhline{|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Parameter}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Coordinates (x,y)}}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Value}}}
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{M}}
+	{\gnumericPB{\centering}\gnumbox{\textit{a , p}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{(3,0)}}
+	{\gnumericPB{\centering}\gnumbox{\textit{6}}}
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{A}}
+	{\gnumericPB{\centering}\gnumbox{\textit{b , q}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{(1.5, 5.81)}}
+	{\gnumericPB{\centering}\gnumbox{\textit{4}}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{\textit{c , r}}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{\textit{5}}}
 \\
 \hhline{|-|-|}
 \end{longtable}
