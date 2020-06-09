@@ -1,0 +1,67 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item Now we know the following values:
+\begin{align}
+\vec{A} &= \begin{pmatrix}r\\0 \end{pmatrix} \\
+\vec{B} &= \begin{pmatrix}-r\\0 \end{pmatrix} \\
+\vec{C} &= r\begin{pmatrix}\cos\theta\\\sin\theta \end{pmatrix} \\
+\vec{D} &= r\begin{pmatrix}\cos\theta_1\\\sin\theta_1 \end{pmatrix} 
+\end{align}
+where $\theta$=45\degree, $\theta_1$ = 105\degree and $r$=2 units.
+
+\item Let the $\angle AEB$= $\alpha$. Consider the below equation,
+\begin{align}
+\brak{\vec{D}-\vec{B}}^T\brak{\vec{C} - \vec{A}} &= BD.AC.\cos\alpha
+\label{eq:gen}
+\end{align}
+
+\item Now finding BD 
+\begin{align}
+(BD)^2 &= \brak{\vec{D}-\vec{B}}^T\brak{\vec{D}-\vec{B}} \\
+       &= r\brak{\cos\theta_1+1 \hspace{0.2cm} \sin\theta_1} r\begin{pmatrix}
+       \cos\theta_1+1 \\ \sin\theta_1
+       \end{pmatrix} \\
+    &= r^2 \brak{1+ \cos^2\theta_1 + 2\cos\theta_1 + \sin^2\theta_1}
+\end{align}
+Substituting the values of $\theta_1$ and $r$ , we get
+\begin{align}
+BD &= 2.435
+\label{eq:BD}
+\end{align}
+
+\item Finding AC 
+\begin{align}
+(AC)^2 &= \brak{\vec{C}-\vec{A}}^T\brak{\vec{C}-\vec{A}} \\
+&= r\brak{\cos\theta-1\hspace{0.2cm} \sin\theta} r\begin{pmatrix}\cos\theta-1\\\sin\theta\end{pmatrix} \\
+&= r^2 \brak{1+ \cos^2\theta + 2\cos\theta + \sin^2\theta}
+\end{align}
+Substituting the values of $\theta$ and $r$ , we get
+\begin{align}
+AC = 1.531
+\label{eq: AC}
+\end{align}
+
+\item Expanding the L.H.S. of \eqref{eq:gen}
+\begin{align}
+&= r\brak{\cos\theta_1+1\hspace{0.2cm}\sin\theta_1} r\begin{pmatrix}
+\cos\theta-1\\\sin\theta
+\end{pmatrix} \\
+&= r^2\brak{\brak{\cos\theta_1+1}\brak{\cos\theta-1}+\sin\theta\sin\theta_1} \\
+&= r^2\brak{\cos\brak{\theta_1 - \theta}-\cos\theta_1+\cos\theta -1} \\
+&= r^2\brak{\cos\beta-\cos\theta_1+\cos\theta -1}
+\end{align}
+Substituting value of $\beta$, $\theta_1$, $\theta$ and $r$, we get
+\begin{align}
+\brak{\vec{D}-\vec{B}}^T\brak{\vec{C} - \vec{A}} &= 1.864
+\label{eq:LHS}
+\end{align}
+\item Substituting values from \eqref{eq: AC},\eqref{eq:BD} and \eqref{eq:LHS} in \eqref{eq:gen}, we get
+\begin{align}
+\cos\alpha &= 0.500 \\
+\alpha &= 60\degree \\
+\angle AEB &= 60\degree
+\end{align}
+
+Hence proved.
+\end{enumerate}
